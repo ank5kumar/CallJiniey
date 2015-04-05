@@ -1,0 +1,35 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout_jiney_base"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <FrameLayout
+        android:id="@+id/notent_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:id="@+id/img_home_background_"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/genie" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hello_world" />
+    </FrameLayout>
+    <!-- Navigaiton Drawer -->
+
+    <ListView
+        android:id="@+id/list_slidermenu_jiney_drawer_base"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/list_background"
+        android:choiceMode="singleChoice"
+        android:divider="@color/list_divider"
+        android:dividerHeight="1dp"
+        android:listSelector="@drawable/list_selector_navigation_drawer" />
+
+</android.support.v4.widget.DrawerLayout>
