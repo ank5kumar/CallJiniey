@@ -17,6 +17,9 @@
     
     <color name="counter_text_bg">#626262</color>
     <color name="counter_text_color">#c5c4c4</color>
-    <color name="actionbar_textactionbar_text">#000000</color>
+    
+    
+    <!-- Action bar colors -->
+    <color name="actionbar_textactionbar_text">#f0f8ff</color>
     <color name="actionbar_text">#000000</color>
 </resources>
