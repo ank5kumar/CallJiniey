@@ -36,5 +36,6 @@
 
     <string name="desc_list_item_icon">Item Icon</string>
     <string name="title_activity_search">SearchActivity</string>
+    <string name="title_activity_repairs">RepairsActivity</string>
 
 </resources>

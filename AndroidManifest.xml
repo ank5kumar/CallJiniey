@@ -6,7 +6,7 @@
 
     <uses-sdk
         android:minSdkVersion="8"
-        android:targetSdkVersion="19" />
+        android:targetSdkVersion="20" />
 
     <application
         android:allowBackup="true"
@@ -31,6 +31,10 @@
         <activity
             android:name=".SearchActivity"
             android:label="@string/title_activity_search" >
+        </activity>
+        <activity
+            android:name=".RepairsActivity"
+            android:label="@string/title_activity_repairs" >
         </activity>
     </application>
 

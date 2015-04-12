@@ -1,10 +1,15 @@
 package com.example.calljiniey;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.UUID;
 
 
-public class ReapirService {
+public class RepairService {
+	
+	private String deviceName;
+	
+	private ArrayList<String> potentialProblems = new ArrayList<String>();
 	
 	
 	private UUID mId;
@@ -12,7 +17,7 @@ public class ReapirService {
 	private Date mDate;
 	private boolean mSolved;
 	
-	public ReapirService() {
+	public RepairService() {
 		// Generate unique identifier
 		this.mId = UUID.randomUUID();
 		this.mDate = new Date();
