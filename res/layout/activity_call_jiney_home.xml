@@ -7,17 +7,17 @@
         android:id="@+id/notent_frame"
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
-        
-          <android.support.v4.view.ViewPager
+
+        <android.support.v4.view.ViewPager
             xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/home_pager_tabs"
             android:layout_width="match_parent"
             android:layout_height="match_parent" >
         </android.support.v4.view.ViewPager>
-        
     </FrameLayout>
-    
+
     <!-- Navigaiton Drawer -->
+
     <ListView
         android:id="@+id/list_slidermenu_jiney_drawer_base"
         android:layout_width="240dp"
@@ -28,5 +28,15 @@
         android:divider="@color/list_divider"
         android:dividerHeight="1dp"
         android:listSelector="@drawable/list_selector_navigation_drawer" />
+
+    <RelativeLayout
+        android:id="@+id/loadingPanel"
+        style="@style/GenericProgressBackground" >
+
+        <ProgressBar
+            style="@style/GenericProgressIndicator"
+            android:minHeight="50dp"
+            android:minWidth="50dp" />
+    </RelativeLayout>
 
 </android.support.v4.widget.DrawerLayout>

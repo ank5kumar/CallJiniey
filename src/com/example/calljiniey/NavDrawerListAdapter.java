@@ -51,8 +51,11 @@ public class NavDrawerListAdapter extends BaseAdapter {
 		}
 
 		ImageView imgIcon = (ImageView) convertView.findViewById(R.id.icon);
+		imgIcon.setFocusable(false);
 		TextView txtTitle = (TextView) convertView.findViewById(R.id.title);
+		txtTitle.setFocusable(false);
 		TextView txtCount = (TextView) convertView.findViewById(R.id.counter);
+		txtCount.setFocusable(false);
 
 		imgIcon.setImageResource(navDrawerItems.get(position).getIcon());        
 		txtTitle.setText(navDrawerItems.get(position).getTitle());
@@ -65,13 +68,13 @@ public class NavDrawerListAdapter extends BaseAdapter {
 			// hide the counter view
 			txtCount.setVisibility(View.GONE);
 		}
-		if(position%2!=0)
+		/*if(position%2!=0)
 			convertView.setBackgroundResource(listItemBackground[1]);
 		else
 			convertView.setBackgroundResource(listItemBackground[0]);
 			//convertView.getBackground().setColorFilter(Color.parseColor("#00ff00"), PorterDuff.Mode.DARKEN);
 			//convertView.setBackgroundColor(getResource().getColor());
-
+*/
 		return convertView;
 	}
 

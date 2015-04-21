@@ -9,7 +9,7 @@ public class RepairService {
 	
 	private String deviceName;
 	
-	private ArrayList<String> potentialProblems = new ArrayList<String>();
+	private ArrayList<ProblemRepairServiceEnum> potentialProblems = new ArrayList<ProblemRepairServiceEnum>();
 	
 	
 	private UUID mId;

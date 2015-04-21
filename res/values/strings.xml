@@ -16,11 +16,12 @@
 
     <string-array name="nav_drawer_items">
         <item>Home</item>
-        <item>Circles</item>
-        <item>Photos</item>
-        <item>Communities</item>
-        <item>Pages</item>
-        <item>What\'s Hot</item>
+        <item>Profile</item>
+        <item>Reuqests</item>
+        <item>Treding</item>
+        <item>Favourites</item>
+        <item>About Us</item>
+        <item>Contact Us</item>
     </string-array>
 
     <!-- Nav Drawer List Item Icons -->
@@ -37,5 +38,10 @@
     <string name="desc_list_item_icon">Item Icon</string>
     <string name="title_activity_search">SearchActivity</string>
     <string name="title_activity_repairs">RepairsActivity</string>
+    <string name="title_activity_opening_screen">OpeningScreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_opening_page">OpeningPageActivity</string>
+    <string name="title_activity_profile">ProfileActivity</string>
 
 </resources>

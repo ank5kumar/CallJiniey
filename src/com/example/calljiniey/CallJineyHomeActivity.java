@@ -1,14 +1,16 @@
 package com.example.calljiniey;
 
+import java.util.ArrayList;
+
 import com.example.calljiniey.R;
 
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
 import android.app.ActionBar;
 import android.app.ActionBar.Tab;
-import android.app.ActionBar.TabListener;
 import android.app.FragmentTransaction;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -20,12 +22,14 @@ public class CallJineyHomeActivity extends CallJineyBaseActivity implements Acti
 
 	public ViewPager viewPager;
 	public ActionBar actionBar;
-
+	
+	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_call_jiney_home);
+	//	setContentView(R.layout.progress_bar);
 		onCreateDrawer();
 		viewPager = (ViewPager) findViewById(R.id.home_pager_tabs);
 		actionBar = getActionBar();
@@ -108,4 +112,5 @@ public class CallJineyHomeActivity extends CallJineyBaseActivity implements Acti
 		// TODO Auto-generated method stub
 
 	}
+	
 }

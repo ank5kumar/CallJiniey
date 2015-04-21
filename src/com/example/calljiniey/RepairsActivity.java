@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class RepairsActivity extends ActionBarActivity {
+public class RepairsActivity extends CallJineyBaseActivity {
 	
 	private ProblemDetailsServicesFragment problemDetailsFragment;
 	
@@ -17,9 +17,21 @@ public class RepairsActivity extends ActionBarActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_repairs);
+		onCreateDrawer();
+		Bundle extras = getIntent().getExtras(); 
+		int  id=-1;
+
+		if (extras != null) {
+		    id = extras.getInt(Utils.SendDeviceId);
+		    // and get whatever type user account id is
+		}
+		
+		Bundle bundle = new Bundle();
+		bundle.putInt(Utils.SendDeviceId, id);
 		
 		if (savedInstanceState == null) {
 			problemDetailsFragment = new ProblemDetailsServicesFragment();
+			problemDetailsFragment.setArguments(bundle);
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.add(R.id.activity_repairs_fragment_container, problemDetailsFragment,TagNamesFragments.TAG_PROFFESIONAL_DETAILS_SERVICES_FRAGMENT).commit();
         }

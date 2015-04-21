@@ -1,25 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <color name="list_item_title">#fff</color>
     <color name="list_background">#1d2b34</color>
     <color name="list_background_pressed">#526068</color>
     <color name="list_odd_background">#26353e</color>
     <color name="list_divider">#272727</color>
-    
-    
+
     <!-- navigation Drawer -->
     <color name="list_divider_navigation_drawer">#999999</color>
     <color name="list_background1_normal_navigation_drawer">#1d2b34</color>
     <color name="list_background2_normal_navigation_drawer">#26353e</color>
     <color name="list_background_navigation_drawer_pressed">#c6373f</color>
-    
-    
-    
     <color name="counter_text_bg">#626262</color>
     <color name="counter_text_color">#c5c4c4</color>
-    
-    
+
     <!-- Action bar colors -->
     <color name="actionbar_textactionbar_text">#f0f8ff</color>
     <color name="actionbar_text">#000000</color>
+    <color name="textbackgorund_opening_page">#FFFFFF</color>
+
 </resources>

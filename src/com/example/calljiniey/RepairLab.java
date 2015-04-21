@@ -11,7 +11,7 @@ public class RepairLab {
 	private ArrayList<RepairService> mRepairServices;	
 	private static RepairLab sCrimeLab;
 	private Context mAppContext;
-	private RepairLab(Context appContext ) {
+	private RepairLab(Context appContext ){
 		mAppContext = appContext;
 
 		mRepairServices = new ArrayList<RepairService>();

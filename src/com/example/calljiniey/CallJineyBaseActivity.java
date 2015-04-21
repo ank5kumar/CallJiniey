@@ -7,6 +7,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.app.ActionBar;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.os.Bundle;
@@ -14,9 +15,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-public class CallJineyBaseActivity extends ActionBarActivity {
+public class CallJineyBaseActivity extends ActionBarActivity  {
 
 	public DrawerLayout mDrawerLayout;
 	public ListView mDrawerList;
@@ -43,8 +45,8 @@ public class CallJineyBaseActivity extends ActionBarActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_call_jiney_base);
-	//	mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout_jiney_base);
-	//	mDrawerList = (ListView) findViewById(R.id.list_slidermenu_jiney_drawer_base);
+		//	mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout_jiney_base);
+		//	mDrawerList = (ListView) findViewById(R.id.list_slidermenu_jiney_drawer_base);
 
 		//onCreateDrawer();
 
@@ -56,7 +58,7 @@ public class CallJineyBaseActivity extends ActionBarActivity {
 		getMenuInflater().inflate(R.menu.call_jiney_base, menu);
 		return true;
 	}
-	
+
 
 	/***
 	 * Called when invalidateOptionsMenu() is triggered
@@ -70,20 +72,20 @@ public class CallJineyBaseActivity extends ActionBarActivity {
 	}
 
 	@Override
-    public boolean onOptionsItemSelected(MenuItem item) {
+	public boolean onOptionsItemSelected(MenuItem item) {
 
-        if (mDrawerToggle.onOptionsItemSelected(item)) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-}
+		if (mDrawerToggle.onOptionsItemSelected(item)) {
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}
 
 	protected void onCreateDrawer(){
 
 		mTitle = mDrawerTitle = getTitle();
 		mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout_jiney_base);
 		mDrawerList = (ListView) findViewById(R.id.list_slidermenu_jiney_drawer_base);
-
+		mDrawerList.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
 		// load slide menu items
 		navMenuTitles = getResources().getStringArray(R.array.nav_drawer_items);
 
@@ -112,13 +114,15 @@ public class CallJineyBaseActivity extends ActionBarActivity {
 		// Recycle the typed array
 		navMenuIcons.recycle();
 
-		mDrawerList.setOnItemClickListener(new SlideMenuClickListener());
 
 		// setting the nav drawer list adapter
 		adapter = new NavDrawerListAdapter(getApplicationContext(),
 				navDrawerItems);
-		mDrawerList.setAdapter(adapter);
+		//	mDrawerList.setAdapter(adapter);
 
+		ArrayAdapter<String> adapter = new ArrayAdapter<String> ( this, android . R . layout . simple_list_item_1, navMenuTitles ) ;
+
+		mDrawerList.setAdapter(adapter);
 		// enabling action bar app icon and behaving it as toggle button
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 		getActionBar().setHomeButtonEnabled(true);
@@ -142,12 +146,20 @@ public class CallJineyBaseActivity extends ActionBarActivity {
 				invalidateOptionsMenu();
 			}
 		};
+
 		mDrawerLayout.setDrawerListener(mDrawerToggle);
+		mDrawerList.setOnItemClickListener(new SlideMenuClickListener());
+
 
 		/*if (savedInstanceState == null) {
 			// on first time display view for first nav item
 			//displayView(0);
 		}*/
+	}
+
+	public void AddDrawerItems()
+	{
+
 	}
 
 	/**
@@ -156,13 +168,13 @@ public class CallJineyBaseActivity extends ActionBarActivity {
 	private class SlideMenuClickListener implements
 	ListView.OnItemClickListener {
 
-		public  SlideMenuClickListener() {
-			System.out.println("sdgs");
-			// TODO Auto-generated constructor stub
-		}
+
 		@Override
 		public void onItemClick(AdapterView<?> parent, View view, int position,
 				long id) {
+			Intent i = new Intent(CallJineyBaseActivity.this ,ProfileActivity.class);
+			startActivity(i);
+
 			// display view for selected nav drawer item
 			//displayView(position);
 		}

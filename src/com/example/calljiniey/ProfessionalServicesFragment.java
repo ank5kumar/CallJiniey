@@ -19,10 +19,8 @@ public class ProfessionalServicesFragment extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
-		 //super.onCreateView(inflater, container, savedInstanceState);
-		 return inflater.inflate(R.layout.fragment_proffesional_services, container,false);
+		//super.onCreateView(inflater, container, savedInstanceState);
+		return inflater.inflate(R.layout.fragment_proffesional_services, container,false);
 	}
-	
-	
 
 }

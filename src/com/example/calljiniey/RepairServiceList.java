@@ -20,7 +20,7 @@ public class RepairServiceList {
 	static ArrayList<String> GetPossibleProblems(RepairServiceEnum device)
 	{
 		ArrayList<String> possibleProblems = new ArrayList<String>();
-		
+
 		if(RepairServiceEnum.AC==device)
 		{
 			possibleProblems.add("AC Installation");
@@ -28,7 +28,7 @@ public class RepairServiceList {
 			possibleProblems.add("AC Not Working");
 
 			possibleProblems.add("AC Removal");
-		
+
 		}
 		if(RepairServiceEnum.TV==device)
 		{
@@ -37,7 +37,7 @@ public class RepairServiceList {
 			possibleProblems.add("TV Not Working");
 
 			possibleProblems.add("Picture Tube Not Workin");
-		
+
 		}
 		if(RepairServiceEnum.Desktop==device)
 		{
@@ -46,9 +46,9 @@ public class RepairServiceList {
 			possibleProblems.add("Display Not Working");
 
 			possibleProblems.add("Picture Tube Not Workin");
-		
+
 		}
-		
+
 		return possibleProblems;
 
 
